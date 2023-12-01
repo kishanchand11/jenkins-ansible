@@ -1,0 +1,3 @@
+---
+- name: installing apache2
+  apt: name=nginx update_cache=yes state=latest 

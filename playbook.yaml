@@ -1,0 +1,6 @@
+---
+- name: installing apache2 on slave2
+  hosts: apache2                   
+  become: true
+  roles:
+  - apache2
