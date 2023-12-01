@@ -1,0 +1,134 @@
+###### anisble installation guide ####
+
+### on master paste these commands
+
+sudo apt update
+sudo apt install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+
+
+
+## on slave install below commands  
+sudo apt update
+sudo apt install python3-venv python3-pip
+
+### now move on to master as normal user tyep below and generate id_rsa key
+cd
+ssh-keygen
+cat id_rsa.pub
+#copy the above key and paste in the slave keygen
+sudo nano .ssh/authorized_keys
+
+
+### on master copy the private ip of slaves and paste under the hosts file of master
+sudo nano /etc/ansible/hosts
+####add privateip of slaves similar to below for group 
+
+[group name]
+slave1 ansible_host=privateip1
+slave1 ansible_host=privateip1   ## no spaces before and after '=' symbol
+
+### save and exit
+
+### never use sudo to ping the servers it will give errors
+
+ansible -m ping -all
+ansible -m ping *       ## both commands one and same
+
+
+#### creating a role under /etc/ansible/roles under master first install tree command
+
+sudo apt install tree
+
+sudo anisble-galaxy init role_name --offline
+
+
+#### only touching tasks folder
+sudo nano main.yaml                                                     # tasks file for role_name 
+---
+- import_tasks: install.yml
+- import_tasks: configure.yml
+- import_tasks: service.yml
+
+ctrl + o and ctrl +x
+
+####### sube files need to created like install.yaml, configure.yaml, service.yaml under same tasks folder
+
+sudo nano install.yaml
+
+---
+- name: installing apache2
+  apt: name=nginx update_cache=yes state=latest    
+  ## use httpd for linux and use update_cache for apache2 need not for nginx , state can be restarted but output may result in errors
+
+sudo nano configure.yaml
+
+---
+- name: configure website
+  copy: src=/etc/ansible/roles/role_name/files/index.html dest=/var/www/html
+  
+## the above file is for copying and replacing the index file from files to slave
+## in /etc/ansible/roles/role_name/files/
+sudo nano index.html
+
+<html>
+<body>
+<h1> welcome to intellipaat, this is ansible casestudy deployed on ngnix server <h1>
+</body>
+</html>
+
+
+
+###### need to create an index.html file under  /etc/ansible/roles/role_name/files/ on master
+
+sudo nano service.yml
+---
+- name: configure service
+  service: name=apache2 state=started
+
+##############################################################################################################################
+########################### $ user create playbook file and add role in it #######################
+sudo nano playbook_name.yaml
+---
+- name: installing apache2 on slave2
+  hosts: apache2                   
+  become: true
+  roles:
+  - apache2
+  
+  
+ ### for syntax checks
+ $ ansible-playbook playbook_name.yaml --syntax-check
+ 
+ $ ansible-playbook playbook_name.yaml --check
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ -------------------------------------------------------------------------------------------------------------
+---
+- name: configure service
+  service: name=apache2 state=started
+  
+---
+- name: configure website
+  copy: src=/etc/ansible/roles/apache2/files/index.html dest=/var/www/html 
+  
+---
+- name: installing apache2
+  apt: name=apache2 update_cache=yes state=latest 
+
+---
+- import_tasks: install.yml
+- import_tasks: configure.yml
+- import_tasks: service.yml
+
+ 
+  
+ 
+ 
