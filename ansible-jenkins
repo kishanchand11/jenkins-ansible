@@ -1,0 +1,33 @@
+## installing jenkins on slave via ansible
+## don't use sudo during ping, executing, and syntax checking. don't use when there is anisble in the command
+##alway execute the playbook in ansible folder and create roles in roles folder
+# during the check there will error in last , due to installation is not completed.
+## ansible is case-sensitive only lowercases
+
+
+note: below script to install jenkins
+
+---
+- name: Ensure Java is installed
+  become: true
+  apt: name=openjdk-17-jre state=present
+
+- name: Import Jenkins GPG key
+  become: true
+  apt_key:
+    url: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+    state: present
+
+- name: Add Jenkins Repository
+  become: true
+  apt_repository:
+    repo: deb https://pkg.jenkins.io/debian-stable binary/
+    state: present
+
+- name: Install Jenkins
+  become: true
+  apt: name=jenkins state=present
+
+- name: Start Jenkins Service
+  become: true
+  service: name=jenkins state=started enabled=yes
