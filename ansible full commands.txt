@@ -11,7 +11,7 @@ sudo apt install ansible -y
 
 ## on slave install below commands  
 sudo apt update
-sudo apt install python3-venv python3-p -y
+sudo apt install -y python3-pip
 sudo apt install docker.io -y
 sudo apt install openjdk-11-jdk -y
 
