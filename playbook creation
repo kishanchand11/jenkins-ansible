@@ -1,0 +1,7 @@
+---
+
+- hosts: slave1
+  become: true
+  tasks:
+  - name: excuting slave1 script
+    script: slave1.sh
