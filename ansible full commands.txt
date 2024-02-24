@@ -29,7 +29,7 @@ sudo nano /etc/ansible/hosts
 
 [group name]
 slave1 ansible_host=privateip1
-slave1 ansible_host=privateip1   ## no spaces before and after '=' symbol
+slave2 ansible_host=privateip1   ## no spaces before and after '=' symbol
 
 ### save and exit
 
