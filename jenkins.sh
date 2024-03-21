@@ -10,6 +10,6 @@ sudo apt-get install jenkins -y
 java --version
 jenkins --version
 
-#curl -sSL https://github.com/kishanchand11/kubernetes/raw/master/kall.sh | tee kall.sh | sudo bash
+#curl -sSL https://github.com/kishanchand11/jenkins-ansible/raw/master/jenkins.sh | tee jenkins.sh | sudo bash
 #or
-#curl -sSL https://raw.githubusercontent.com/kishanchand11/kubernetes/master/kall.sh | sudo tee kall.sh >/dev/null && sudo bash kall.sh
+#curl -sSL https://github.com/kishanchand11/jenkins-ansible/master/jenkins.sh | sudo tee jenkins.sh >/dev/null && sudo bash jenkins.sh
