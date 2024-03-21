@@ -7,6 +7,6 @@ sudo apt install ansible -y
 ansible --version
 
 
-#curl -sSL https://github.com/kishanchand11/kubernetes/raw/master/kall.sh | tee kall.sh | sudo bash
+#curl -sSL https://github.com/kishanchand11/jenkins-ansible/raw/master/ansibleM.sh | tee ansibleM.sh | sudo bash
 #or
-#curl -sSL https://raw.githubusercontent.com/kishanchand11/kubernetes/master/kall.sh | sudo tee kall.sh >/dev/null && sudo bash kall.sh
+#curl -sSL https://github.com/kishanchand11/jenkins-ansible/master/ansibleM.sh | sudo tee ansibleM.sh >/dev/null && sudo bash ansibleM.sh
