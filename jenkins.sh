@@ -9,3 +9,7 @@ sudo apt-get update
 sudo apt-get install jenkins -y
 java --version
 jenkins --version
+
+#curl -sSL https://github.com/kishanchand11/kubernetes/raw/master/kall.sh | tee kall.sh | sudo bash
+#or
+#curl -sSL https://raw.githubusercontent.com/kishanchand11/kubernetes/master/kall.sh | sudo tee kall.sh >/dev/null && sudo bash kall.sh
