@@ -16,6 +16,8 @@ sudo apt update
 
 sudo apt-get install terraform
 
+terraform --version
+
 #curl -sSL https://github.com/kishanchand11/jenkins-ansible/raw/main/terraform.sh | tee terraform.sh  | sudo bash
 #or
 #curl -sSL https://github.com/kishanchand11/jenkins-ansible/main/terraform.sh | sudo tee terraform.sh  >/dev/null && sudo bash terraform.sh 
