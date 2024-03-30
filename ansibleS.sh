@@ -8,6 +8,6 @@ docker --version
 java --version
 
 
-#curl -sSL https://github.com/kishanchand11/jenkins-ansible/raw/master/ansibleS.sh | tee ansibleS.sh | sudo bash
+#curl -sSL https://github.com/kishanchand11/jenkins-ansible/raw/main/ansibleS.sh | tee ansibleS.sh | sudo bash
 #or
-#curl -sSL https://github.com/kishanchand11/jenkins-ansible/master/ansibleS.sh | sudo tee ansibleS.sh >/dev/null && sudo bash ansibleS.sh
+#curl -sSL https://github.com/kishanchand11/jenkins-ansible/main/ansibleS.sh | sudo tee ansibleS.sh >/dev/null && sudo bash ansibleS.sh
