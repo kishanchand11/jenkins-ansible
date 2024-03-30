@@ -11,6 +11,6 @@ sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update
 sudo apt-get install terraform
 
-#curl -sSL https://github.com/kishanchand11/jenkins-ansible/raw/master/terraform.sh | tee terraform.sh  | sudo bash
+#curl -sSL https://github.com/kishanchand11/jenkins-ansible/raw/main/terraform.sh | tee terraform.sh  | sudo bash
 #or
-#curl -sSL https://github.com/kishanchand11/jenkins-ansible/master/terraform.sh | sudo tee terraform.sh  >/dev/null && sudo bash terraform.sh 
+#curl -sSL https://github.com/kishanchand11/jenkins-ansible/main/terraform.sh | sudo tee terraform.sh  >/dev/null && sudo bash terraform.sh 
