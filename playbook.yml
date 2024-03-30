@@ -6,4 +6,4 @@
   - name: excuting slave1 script
     script: slave1.sh
 
-# curl -L https://github.com/kishanchand11/jenkins-ansible/raw/main/terraform.sh | sudo tee terraform.sh  
+# curl -L https://github.com/kishanchand11/jenkins-ansible/raw/main/playbook.yml | sudo tee playbook.yml  
