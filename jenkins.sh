@@ -11,5 +11,5 @@ java --version
 jenkins --version
 
 #curl -sSL https://github.com/kishanchand11/jenkins-ansible/raw/main/jenkins.sh | tee jenkins.sh | sudo bash
-#or
+#copy curl -L https://github.com/kishanchand11/jenkins-ansible/raw/main/jenkins.sh | sudo tee jenkins.sh 
 #curl -sSL https://github.com/kishanchand11/jenkins-ansible/main/jenkins.sh | sudo tee jenkins.sh >/dev/null && sudo bash jenkins.sh
