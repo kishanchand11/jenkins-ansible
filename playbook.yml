@@ -1,9 +1,9 @@
 ---
 
-- hosts: slaves
+- hosts: "enter your host name"
   become: true
   tasks:
   - name: excuting slave1 script
-    script: 
+    script: "enter your script name"
 
 # curl -L https://github.com/kishanchand11/jenkins-ansible/raw/main/playbook.yml | sudo tee playbook.yml  
