@@ -19,4 +19,4 @@ echo "Updating package database..."
 sudo apt update
 
 
-#curl 
+#curl -sSL https://github.com/kishanchand11/jenkins-ansible/raw/main/aptlock.sh  | sudo tee aptlock.sh | sudo bash
