@@ -11,3 +11,8 @@ java --version
 #curl -sSL https://github.com/kishanchand11/jenkins-ansible/raw/main/ansibleS.sh | sudo tee ansibleS.sh | sudo bash
 #or
 #curl -sSL https://github.com/kishanchand11/jenkins-ansible/main/ansibleS.sh | sudo tee ansibleS.sh >/dev/null && sudo bash ansibleS.sh
+
+
+# deomon tools pop error fix#
+# sudo nano /etc/needrestart/needrestart.conf file #
+# add $nrconf{restart} = 'a';     #in the file
