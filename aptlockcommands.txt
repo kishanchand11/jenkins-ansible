@@ -1,0 +1,4 @@
+sudo lsof /var/lib/dpkg/lock-frontend
+sudo kill <process_id>
+sudo rm /var/lib/dpkg/lock-frontend
+sudo apt update
