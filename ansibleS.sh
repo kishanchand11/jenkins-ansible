@@ -14,3 +14,10 @@ java --version
 # deomon tools pop error fix#
 # sudo nano /etc/needrestart/needrestart.conf file #
 # add $nrconf{restart} = 'a';     #in the file
+
+
+# for sudo fix   sudo su    
+# visudo -f /etc/sudoers
+# unser groups add jenkins ALL= NOPASSWD: ALL
+
+
