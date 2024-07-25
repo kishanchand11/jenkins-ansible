@@ -82,6 +82,17 @@ sudo nano index.html
 <h1> welcome to intellipaat, this is ansible casestudy deployed on ngnix server <h1>
 </body>
 </html>
+---------------meme code<html>-----------------------------
+<head>
+  <title>Intellipaat Ansible Case Study</title>
+</head>
+<body>
+  <h1>Welcome to Intellipaat, this is Ansible case study deployed on nginx server</h1>
+  <img src="https://brobible.com/wp-content/uploads/2022/03/best-memes-sleep.png" alt="Funny meme about sleep">
+</body>
+</html>
+-------------------------------------- html---------
+
 
 
 
