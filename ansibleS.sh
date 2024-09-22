@@ -1,7 +1,7 @@
 ## on slave install below commands  
 sudo apt update
 sudo apt install -y python3-pip
-sudo apt install openjdk-17-jdk -y
+sudo apt-get install openjdk-17-jdk -y
 pip --version
 java --version
 
